@@ -4,7 +4,7 @@
  */
 
 #include "display_ili9340.h"
-#include <drivers/display/ili9340.h>
+#include <display.h>
 
 #define SYS_LOG_DOMAIN "ILI9340"
 #define SYS_LOG_LEVEL CONFIG_SYS_LOG_ILI9340_LEVEL
@@ -27,6 +27,17 @@ static void ili9340_exit_sleep(struct ili9340_data *data);
 static void ili9340_set_mem_area(struct ili9340_data *data, const u16_t x,
 				 const u16_t y, const u16_t w, const u16_t h);
 static int ili9340_init(struct device *dev);
+static int ili9340_write_bitmap(const struct device *dev, const u16_t x,
+				const u16_t y, const u16_t w, const u16_t h,
+				const u8_t *rgb_data);
+static int ili9340_display_on(struct device *dev);
+static int ili9340_display_off(struct device *dev);
+
+static const struct display_driver_api ili9340_api = {
+	.display_on = ili9340_display_on,
+	.display_off = ili9340_display_off,
+	.write_bitmap = ili9340_write_bitmap
+};
 
 int ili9340_init(struct device *dev)
 {
@@ -80,25 +91,10 @@ int ili9340_init(struct device *dev)
 	SYS_LOG_DBG("Exiting sleep mode");
 	ili9340_exit_sleep(data);
 
-	/* device_get_binding checks if driver_api is not zero before checking
-	 * device name.
-	 * So just set driver_api to 1 else the function call will fail
-	 */
-	dev->driver_api = (void *)1;
-
 	return 0;
 }
 
-void ili9340_write_pixel(const struct device *dev, const u16_t x, const u16_t y,
-			 const u8_t r, const u8_t g, const u8_t b)
-{
-	u8_t rgb_data[] = {r, g, b};
-
-	SYS_LOG_DBG("Writing pixel @ %dx%d (x,y)", x, y);
-	ili9340_write_bitmap(dev, x, y, 1, 1, &rgb_data[0]);
-}
-
-void ili9340_write_bitmap(const struct device *dev, const u16_t x,
+int ili9340_write_bitmap(const struct device *dev, const u16_t x,
 			  const u16_t y, const u16_t w, const u16_t h,
 			  const u8_t *rgb_data)
 {
@@ -108,22 +104,25 @@ void ili9340_write_bitmap(const struct device *dev, const u16_t x,
 	ili9340_set_mem_area(data, x, y, w, h);
 	ili9340_transmit(data, ILI9340_CMD_MEM_WRITE, (void *)rgb_data,
 			 3 * w * h);
+	return 0;
 }
 
-void ili9340_display_on(struct device *dev)
+int ili9340_display_on(struct device *dev)
 {
 	struct ili9340_data *data = (struct ili9340_data *)dev->driver_data;
 
 	SYS_LOG_DBG("Turning display on");
 	ili9340_transmit(data, ILI9340_CMD_DISPLAY_ON, NULL, 0);
+	return 0;
 }
 
-void ili9340_display_off(struct device *dev)
+int ili9340_display_off(struct device *dev)
 {
 	struct ili9340_data *data = (struct ili9340_data *)dev->driver_data;
 
 	SYS_LOG_DBG("Turning display off");
 	ili9340_transmit(data, ILI9340_CMD_DISPLAY_OFF, NULL, 0);
+	return 0;
 }
 
 void ili9340_transmit(struct ili9340_data *data, u8_t cmd, void *tx_data,
@@ -167,5 +166,6 @@ void ili9340_set_mem_area(struct ili9340_data *data, const u16_t x,
 
 static struct ili9340_data ili9340_data;
 
-DEVICE_INIT(ili9340, CONFIG_ILI9340_DEV_NAME, &ili9340_init, &ili9340_data,
-	    NULL, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
+DEVICE_AND_API_INIT(ili9340, CONFIG_ILI9340_DEV_NAME, &ili9340_init,
+		    &ili9340_data, NULL, APPLICATION,
+		    CONFIG_APPLICATION_INIT_PRIORITY, &ili9340_api);

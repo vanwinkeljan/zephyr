@@ -5,7 +5,7 @@
  */
 
 #include <device.h>
-#include <drivers/display/ili9340.h>
+#include <display.h>
 #include <stdio.h>
 #include <string.h>
 #include <zephyr.h>
@@ -67,10 +67,10 @@ void main(void)
 	h_step = (w * h) / SCREEN_HEIGHT;
 
 	for (int idx = 0; idx < SCREEN_HEIGHT; idx += h_step) {
-		ili9340_write_bitmap(dev, 0, idx, SCREEN_WIDTH, h_step, buf);
+		display_write_bitmap(dev, 0, idx, SCREEN_WIDTH, h_step, buf);
 	}
 
-	ili9340_display_on(dev);
+	display_on(dev);
 
 	while (1) {
 		/* Update the color of the rectangle buffer and write the buffer
@@ -82,16 +82,16 @@ void main(void)
 		}
 		switch (cnt % 4) {
 		case 0:
-			ili9340_write_bitmap(dev, x0, y0, w, h, buf);
+			display_write_bitmap(dev, x0, y0, w, h, buf);
 			break;
 		case 1:
-			ili9340_write_bitmap(dev, x1, y1, w, h, buf);
+			display_write_bitmap(dev, x1, y1, w, h, buf);
 			break;
 		case 2:
-			ili9340_write_bitmap(dev, x2, y2, w, h, buf);
+			display_write_bitmap(dev, x2, y2, w, h, buf);
 			break;
 		case 3:
-			ili9340_write_bitmap(dev, x3, y3, w, h, buf);
+			display_write_bitmap(dev, x3, y3, w, h, buf);
 			break;
 		}
 		++cnt;
