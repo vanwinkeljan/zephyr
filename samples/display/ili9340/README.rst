@@ -45,6 +45,8 @@ This sample can be build with following commands.
 .. code-block:: console
 
   $ cd $ZEPHYR_BASE/samples/display/ili9340
+  $ mkdir build && cd build
+  $ cmake -DBOARD=nucleo_l476rg ..
   $ make
 
 See :ref:`nucleo_l476rg_board` on how to flash the build.

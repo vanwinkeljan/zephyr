@@ -1,12 +1,12 @@
 add_subdirectory(console)
 add_subdirectory(crc)
-add_subdirectory(display)
 add_subdirectory(interrupt_controller)
 
 add_subdirectory_if_kconfig(adc)
 add_subdirectory_if_kconfig(clock_control)
 add_subdirectory_if_kconfig(counter)
 add_subdirectory_if_kconfig(crypto)
+add_subdirectory_if_kconfig(display)
 add_subdirectory_if_kconfig(dma)
 add_subdirectory_if_kconfig(flash)
 add_subdirectory_if_kconfig(gpio)
