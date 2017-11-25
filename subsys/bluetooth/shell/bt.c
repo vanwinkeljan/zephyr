@@ -667,6 +667,7 @@ static int cmd_scan(int argc, char *argv[])
 	return 0;
 }
 
+#if defined(CONFIG_BT_CENTRAL)
 static int cmd_connect_le(int argc, char *argv[])
 {
 	int err;
@@ -697,6 +698,7 @@ static int cmd_connect_le(int argc, char *argv[])
 
 	return 0;
 }
+#endif
 
 static int cmd_disconnect(int argc, char *argv[])
 {
@@ -736,6 +738,7 @@ static int cmd_disconnect(int argc, char *argv[])
 	return 0;
 }
 
+#if defined(CONFIG_BT_CENTRAL)
 static int cmd_auto_conn(int argc, char *argv[])
 {
 	bt_addr_le_t addr;
@@ -763,6 +766,7 @@ static int cmd_auto_conn(int argc, char *argv[])
 
 	return 0;
 }
+#endif
 
 static int cmd_select(int argc, char *argv[])
 {
@@ -1972,9 +1976,13 @@ static const struct shell_cmd bt_commands[] = {
 	  "<value: on, passive, off> <dup filter: dups, nodups>" },
 	{ "advertise", cmd_advertise,
 	  "<type: off, on, scan, nconn> <mode: discov, non_discov>" },
+#if defined(CONFIG_BT_CENTRAL)
 	{ "connect", cmd_connect_le, HELP_ADDR_LE },
+#endif
 	{ "disconnect", cmd_disconnect, HELP_NONE },
+#if defined(CONFIG_BT_CENTRAL)
 	{ "auto-conn", cmd_auto_conn, HELP_ADDR_LE },
+#endif
 	{ "select", cmd_select, HELP_ADDR_LE },
 	{ "conn-update", cmd_conn_update, "<min> <max> <latency> <timeout>" },
 	{ "oob", cmd_oob },
