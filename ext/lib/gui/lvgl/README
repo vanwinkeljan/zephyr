@@ -1,0 +1,52 @@
+LittlevGL
+#########
+
+Origin:
+   LittlevGL - Open-source Embedded GUI Library
+   https://littlevgl.com/
+
+Status:
+   Version 5.2-rc
+
+Purpose:
+   Embedded graphics library
+
+Description:
+
+   General Description (from projects website):
+   "LittlevGL is a free and open-source graphics library providing everything
+   you need to create embedded GUI with easy-to-use graphical elements,
+   beautiful visual effects and low memory footprint."
+
+   Problem:
+   Rendering objects to a screen
+
+   Why this package:
+   Lightweight well maintained graphics library.
+   Requested in issue #6709
+
+Dependencies:
+   No external run time dependencies.
+   Dependency towards tools to generate c arrays for fonts and images.
+
+   Library depends on Zephyr k_malloc & k_free.
+
+   Zephyr will directly depend on the API provided by the library and no
+   abstraction layer is available.
+
+URL:
+   Home: https://littlevgl.com/
+   Source: https://github.com/littlevgl/lvgl
+
+commit:
+   41695bf9ac758ae3276424e06308e1bb89c4c019
+
+Maintained-by:
+   kisvegabor - Gabor Kiss-Vamosi
+
+License:
+   MIT
+
+License Link:
+   https://github.com/littlevgl/lvgl/blob/master/licence.txt
+
