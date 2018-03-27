@@ -1,0 +1,8 @@
+sample:
+  description: LVGL sample application
+  name: lvgl
+tests:
+  test:
+    build_only: true
+    platform_whitelist: nrf52840_pca10056, native_posix, reel_board
+    tags: samples display
