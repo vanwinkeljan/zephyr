@@ -1,0 +1,28 @@
+# TSL2591 ligth-to-digital converter configuration options
+
+#
+# Copyright (c) 2018 dXplore
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+menuconfig TSL2591
+	bool "TSL2591 sensor"
+	depends on I2C
+	default	n
+	help
+	 Enable driver for TSL2591 light-to-digital converter.
+
+if TSL2591
+
+config TSL2591_DEV_NAME
+	string "TSL2591 device name"
+	default "TSL2591"
+
+config TSL2591_I2C_MASTER_DEV_NAME
+	string "I2C master where TSL2591 is connected"
+	default "I2C_0"
+	help
+	 Specify the device name of the I2C master device to which TSL2591 is
+	 connected.
+
+endif #TSL2591
