@@ -10,6 +10,7 @@
 #include "posix_arch_internal.h"
 #include "soc.h"
 #include "hw_models_top.h"
+#include <drivers/gpio/gpio_sdl.h>
 
 u64_t sdl_event_timer;
 
@@ -50,6 +51,12 @@ void sdl_handle_events(void)
 			break;
 		case SDL_QUIT:
 			posix_exit(0);
+			break;
+		case SDL_KEYUP:
+		case SDL_KEYDOWN:
+#ifdef CONFIG_GPIO_SDL
+			gpio_sdl_handle_keyboard_event(&event);
+#endif
 			break;
 		default:
 			break;
