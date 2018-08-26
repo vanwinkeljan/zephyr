@@ -1,0 +1,1223 @@
+# Kconfig.sdl_switch_types - SDL based GPIO switch type configuration options
+#
+# Copyright (c) 2018 Jan Van Winkel (jan.van_winkel@dxplore.eu)
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+choice
+	prompt "SDL 0 pin 0 switch type"
+	default GPIO_SDL_0_PIN_0_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 0 switch type
+
+config GPIO_SDL_0_PIN_0_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_0_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_0_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_0_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_0_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_0_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_0_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_0_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_0_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 1 switch type"
+	default GPIO_SDL_0_PIN_1_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 1 switch type
+
+config GPIO_SDL_0_PIN_1_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_1_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_1_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_1_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_1_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_1_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_1_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_1_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_1_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 2 switch type"
+	default GPIO_SDL_0_PIN_2_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 2 switch type
+
+config GPIO_SDL_0_PIN_2_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_2_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_2_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_2_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_2_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_2_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_2_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_2_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_2_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 3 switch type"
+	default GPIO_SDL_0_PIN_3_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 3 switch type
+
+config GPIO_SDL_0_PIN_3_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_3_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_3_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_3_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_3_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_3_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_3_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_3_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_3_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 4 switch type"
+	default GPIO_SDL_0_PIN_4_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 4 switch type
+
+config GPIO_SDL_0_PIN_4_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_4_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_4_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_4_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_4_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_4_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_4_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_4_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_4_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 5 switch type"
+	default GPIO_SDL_0_PIN_5_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 0 switch type
+
+config GPIO_SDL_0_PIN_5_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_5_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_5_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_5_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_5_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_5_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_5_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_5_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_5_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 6 switch type"
+	default GPIO_SDL_0_PIN_6_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 6 switch type
+
+config GPIO_SDL_0_PIN_6_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_6_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_6_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_6_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_6_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_6_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_6_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_6_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_6_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 7 switch type"
+	default GPIO_SDL_0_PIN_7_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 7 switch type
+
+config GPIO_SDL_0_PIN_7_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_7_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_7_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_7_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_7_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_7_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_7_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_7_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_7_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 8 switch type"
+	default GPIO_SDL_0_PIN_8_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 8 switch type
+
+config GPIO_SDL_0_PIN_8_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_8_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_8_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_8_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_8_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_8_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_8_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_8_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_8_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 9 switch type"
+	default GPIO_SDL_0_PIN_9_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 9 switch type
+
+config GPIO_SDL_0_PIN_9_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_9_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_9_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_9_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_9_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_9_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_9_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_9_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_9_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 10 switch type"
+	default GPIO_SDL_0_PIN_10_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 10 switch type
+
+config GPIO_SDL_0_PIN_10_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_10_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_10_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_10_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_10_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_10_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_10_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_10_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_10_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 11 switch type"
+	default GPIO_SDL_0_PIN_11_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 11 switch type
+
+config GPIO_SDL_0_PIN_11_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_11_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_11_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_11_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_11_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_11_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_11_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_11_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_11_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 12 switch type"
+	default GPIO_SDL_0_PIN_12_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 12 switch type
+
+config GPIO_SDL_0_PIN_12_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_12_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_12_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_12_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_12_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_12_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_12_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_12_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_12_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 13 switch type"
+	default GPIO_SDL_0_PIN_13_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 13 switch type
+
+config GPIO_SDL_0_PIN_13_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_13_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_13_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_13_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_13_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_13_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_13_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_13_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_13_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 14 switch type"
+	default GPIO_SDL_0_PIN_14_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 14 switch type
+
+config GPIO_SDL_0_PIN_14_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_14_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_14_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_14_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_14_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_14_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_14_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_14_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_14_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 15 switch type"
+	default GPIO_SDL_0_PIN_15_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 15 switch type
+
+config GPIO_SDL_0_PIN_15_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_15_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_15_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_15_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_15_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_15_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_15_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_15_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_15_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 16 switch type"
+	default GPIO_SDL_0_PIN_16_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 16 switch type
+
+config GPIO_SDL_0_PIN_16_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_16_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_16_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_16_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_16_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_16_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_16_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_16_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_16_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 17 switch type"
+	default GPIO_SDL_0_PIN_17_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 17 switch type
+
+config GPIO_SDL_0_PIN_17_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_17_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_17_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_17_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_17_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_17_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_17_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_17_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_17_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 18 switch type"
+	default GPIO_SDL_0_PIN_18_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 18 switch type
+
+config GPIO_SDL_0_PIN_18_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_18_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_18_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_18_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_18_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_18_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_18_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_18_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_18_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 19 switch type"
+	default GPIO_SDL_0_PIN_19_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 19 switch type
+
+config GPIO_SDL_0_PIN_19_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_19_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_19_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_19_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_19_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_19_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_19_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_19_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_19_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 20 switch type"
+	default GPIO_SDL_0_PIN_20_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 20 switch type
+
+config GPIO_SDL_0_PIN_20_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_20_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_20_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_20_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_20_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_20_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_20_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_20_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_20_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 21 switch type"
+	default GPIO_SDL_0_PIN_21_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 21 switch type
+
+config GPIO_SDL_0_PIN_21_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_21_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_21_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_21_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_21_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_21_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_21_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_21_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_21_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 22 switch type"
+	default GPIO_SDL_0_PIN_22_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 22 switch type
+
+config GPIO_SDL_0_PIN_22_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_22_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_22_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_22_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_22_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_22_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_22_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_22_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_22_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 23 switch type"
+	default GPIO_SDL_0_PIN_23_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 23 switch type
+
+config GPIO_SDL_0_PIN_23_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_23_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_23_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_23_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_23_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_23_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_23_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_23_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_23_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 24 switch type"
+	default GPIO_SDL_0_PIN_24_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 24 switch type
+
+config GPIO_SDL_0_PIN_24_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_24_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_24_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_24_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_24_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_24_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_24_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_24_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_24_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 25 switch type"
+	default GPIO_SDL_0_PIN_25_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 25 switch type
+
+config GPIO_SDL_0_PIN_25_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_25_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_25_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_25_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_25_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_25_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_25_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_25_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_25_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 26 switch type"
+	default GPIO_SDL_0_PIN_26_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 26 switch type
+
+config GPIO_SDL_0_PIN_26_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_26_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_26_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_26_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_26_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_26_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_26_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_26_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_26_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 27 switch type"
+	default GPIO_SDL_0_PIN_27_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 27 switch type
+
+config GPIO_SDL_0_PIN_27_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_27_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_27_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_27_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_27_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_27_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_27_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_27_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_27_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 28 switch type"
+	default GPIO_SDL_0_PIN_28_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 28 switch type
+
+config GPIO_SDL_0_PIN_28_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_28_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_28_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_28_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_28_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_28_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_28_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_28_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_28_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 29 switch type"
+	default GPIO_SDL_0_PIN_29_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 29 switch type
+
+config GPIO_SDL_0_PIN_29_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_29_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_29_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_29_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_29_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_29_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_29_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_29_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_29_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 30 switch type"
+	default GPIO_SDL_0_PIN_30_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 30 switch type
+
+config GPIO_SDL_0_PIN_30_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_30_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_30_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_30_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_30_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_30_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_30_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_30_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_30_SWITCH_TYPE_IMPULSE
+
+choice
+	prompt "SDL 0 pin 31 switch type"
+	default GPIO_SDL_0_PIN_31_SWITCH_TYPE_TOGGLE
+	help
+	  SDL 0 pin 31 switch type
+
+config GPIO_SDL_0_PIN_31_SWITCH_TYPE_TOGGLE
+	bool "Toggle switch"
+	help
+	  Pressing the associated key on the keyboard will switch the state of the GPIO pin
+
+config GPIO_SDL_0_PIN_31_SWITCH_TYPE_MOMENTARY_NO
+	bool "Normal open momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  one, if the key is released the state will be set to zero
+
+config GPIO_SDL_0_PIN_31_SWITCH_TYPE_MOMENTARY_NC
+	bool "Normal closed momentary switch"
+	help
+	  Pressing the associated key on the keyboard will set the GPIO pin to
+	  zero, if the key is released the state will be set to one
+
+config GPIO_SDL_0_PIN_31_SWITCH_TYPE_IMPULSE
+	bool "Impulse switch"
+	help
+	  Pressing the associated key on the keyboard will not change the
+	  state but raise an interrupt
+
+endchoice
+
+config GPIO_SDL_0_PIN_31_SWITCH_TYPE
+	int
+	default 0 if GPIO_SDL_0_PIN_31_SWITCH_TYPE_TOGGLE
+	default 1 if GPIO_SDL_0_PIN_31_SWITCH_TYPE_MOMENTARY_NO
+	default 2 if GPIO_SDL_0_PIN_31_SWITCH_TYPE_MOMENTARY_NC
+	default 3 if GPIO_SDL_0_PIN_31_SWITCH_TYPE_IMPULSE
+

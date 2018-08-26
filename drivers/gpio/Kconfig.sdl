@@ -1,0 +1,46 @@
+# Kconfig.sdl - SDL based GPIO configuration options
+#
+# Copyright (c) 2018 Jan Van Winkel (jan.van_winkel@dxplore.eu)
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+
+menuconfig GPIO_SDL
+	bool "GPIO Driver for SDL based input emulation"
+	depends on GPIO && SOC_POSIX
+	select HAS_SDL
+	help
+	Enable GPIO driver for SDL based input emulation
+
+if GPIO_SDL
+
+config GPIO_SDL_0_DEV_NAME
+	string "SDL 0 GPIO Device Name"
+	default "GPIO_0"
+	help
+	  Specify the device name to be used for SDL 0 GPIO.
+
+config GPIO_SDL_0_INIT_PRIORITY
+	int "SDL 0 GPIO initialization priority"
+	default 40
+	help
+	  Initialization priority for SDL 0 GPIO.
+
+config GPIO_SDL_0_IRQ
+	int "SDL 0 interrupt number"
+	default 1
+	help
+	  SDL 0 GPIO interrupt number
+
+config GPIO_SDL_0_IRQ_PRIORITY
+	int "SDL 0 GPIO interrupt priority"
+	default 1
+	help
+	SDL 0 GPIO interrupt priority.
+
+source "drivers/gpio/Kconfig.sdl_scan_codes"
+
+source "drivers/gpio/Kconfig.sdl_switch_types"
+
+endif #GPIO_SDL
