@@ -559,6 +559,39 @@ The following peripherals are currently provided with this board:
   The flash content can be accessed from the host system, as explained in the
   `Host based flash access`_ section.
 
+**GPIO driver**:
+  A GPIO driver is provided that allows to bind keys from the host keyboard to
+  the native POSIX board.
+
+  In total 32 keys can be bound to GPIO pins of a single GPIO port by means of
+  Kconfig options (e.g. :option:`CONFIG_GPIO_SDL_0_PIN_0_SCAN_CODE`). Each
+  Kconfig option will take a keyboard scan code as defined in `USB HID Usage
+  Tables - Keyboard Usage page (0x07)`_
+
+  Further for each GPIO pin a switch type can be configured, up to four switch
+  types are available:
+
+  - Toggle switch (:option:`CONFIG_GPIO_SDL_0_PIN_0_SWITCH_TYPE_TOGGLE`)
+    Each key press of the associated key will result in a toggle of the previous
+    state.
+  - Impulse switch (:option:`CONFIG_GPIO_SDL_0_PIN_0_SWITCH_TYPE_IMPULSE`)
+    Each key press of the associated key will result in interrupt, if enabled,
+    but no state change will take place
+  - Momentary normal open switch
+    (:option:`CONFIG_GPIO_SDL_0_PIN_0_SWITCH_TYPE_MOMENTARY_NO`)
+    Each key press of the associated key will set the GPIO pin to one, this
+    state will be maintained as long as they key is pressed
+  - Momentary normal closed switch
+    (:option:`CONFIG_GPIO_SDL_0_PIN_0_SWITCH_TYPE_MOMENTARY_NO`)
+    Each key press of the associated key will set the GPIO pin to zero, this
+    state will be maintained as long as they key is pressed
+
+   This driver requires the SDL2 library on the host, for more info see
+   display driver.
+
+.. _USB HID Usage Tables - Keyboard Usage page (0x07):
+   http://www.usb.org/developers/hidpage/Hut1_12v2.pdf .
+
 UART
 ****
 

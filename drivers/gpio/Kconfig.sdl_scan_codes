@@ -1,0 +1,263 @@
+# Kconfig.sdl_scan_codes - SDL based GPIO scan code configuration options
+#
+# Copyright (c) 2018 Jan Van Winkel (jan.van_winkel@dxplore.eu)
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config GPIO_SDL_0_PIN_0_SCAN_CODE
+	int "SDL 0 pin 0 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_1_SCAN_CODE
+	int "SDL 0 pin 1 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_2_SCAN_CODE
+	int "SDL 0 pin 2 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_3_SCAN_CODE
+	int "SDL 0 pin 3 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_4_SCAN_CODE
+	int "SDL 0 pin 4 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_5_SCAN_CODE
+	int "SDL 0 pin 5 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_6_SCAN_CODE
+	int "SDL 0 pin 6 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_7_SCAN_CODE
+	int "SDL 0 pin 7 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_8_SCAN_CODE
+	int "SDL 0 pin 8 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_9_SCAN_CODE
+	int "SDL 0 pin 9 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_10_SCAN_CODE
+	int "SDL 0 pin 10 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_11_SCAN_CODE
+	int "SDL 0 pin 11 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_12_SCAN_CODE
+	int "SDL 0 pin 12 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_13_SCAN_CODE
+	int "SDL 0 pin 13 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_14_SCAN_CODE
+	int "SDL 0 pin 14 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_15_SCAN_CODE
+	int "SDL 0 pin 15 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_16_SCAN_CODE
+	int "SDL 0 pin 16 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_17_SCAN_CODE
+	int "SDL 0 pin 17 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_18_SCAN_CODE
+	int "SDL 0 pin 18 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_19_SCAN_CODE
+	int "SDL 0 pin 19 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_20_SCAN_CODE
+	int "SDL 0 pin 20 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_21_SCAN_CODE
+	int "SDL 0 pin 21 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_22_SCAN_CODE
+	int "SDL 0 pin 22 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_23_SCAN_CODE
+	int "SDL 0 pin 23 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_24_SCAN_CODE
+	int "SDL 0 pin 24 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_25_SCAN_CODE
+	int "SDL 0 pin 25 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_26_SCAN_CODE
+	int "SDL 0 pin 26 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_27_SCAN_CODE
+	int "SDL 0 pin 27 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_28_SCAN_CODE
+	int "SDL 0 pin 28 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_29_SCAN_CODE
+	int "SDL 0 pin 29 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_30_SCAN_CODE
+	int "SDL 0 pin 30 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
+config GPIO_SDL_0_PIN_31_SCAN_CODE
+	int "SDL 0 pin 31 keyboard scan code"
+	default 0
+	range 0 255
+	help
+	  SDL 0 keyboard scan code as defined in USB HID Usage Tables, Keyboard Usage page (0x07).
+	  For possible values see: http://www.usb.org/developers/hidpage/Hut1_12v2.pdf
+
