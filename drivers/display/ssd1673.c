@@ -272,7 +272,7 @@ static int ssd1673_write(const struct device *dev, const u16_t x,
 	ssd1673_busy_wait(driver);
 
 	err = ssd1673_write_cmd(driver, SSD1673_CMD_ENTRY_MODE,
-				&driver->scan_mode, sizeof(driver->scan_mode));
+			&driver->scan_mode, sizeof(driver->scan_mode));
 	if (err < 0) {
 		return err;
 	}
