@@ -79,4 +79,11 @@ config SDL_DISPLAY
 
 endif # DISPLAY
 
+if FLASH
+
+config FLASH_NATIVE_POSIX
+	default y
+
+endif # FLASH
+
 endif # BOARD_NATIVE_POSIX
