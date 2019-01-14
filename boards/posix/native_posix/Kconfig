@@ -20,4 +20,10 @@ config HAS_SDL
 	help
 	  This option specifies that the target board has SDL support
 
+config NATIVE_POSIX_FUSE_FLASH_ACCESS
+	bool "Enable FUSE based access to partitions on flash device"
+	depends on FILE_SYSTEM
+	help
+	  Expose flash partitions to the host system through FUSE.
+
 endif

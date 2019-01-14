@@ -553,6 +553,10 @@ The following peripherals are currently provided with this board:
   configuration. In case the file does not exists the driver will take care of
   creating the file, else the existing file is used.
 
+  Further there is option available to access the flash content from the host
+  system, for more information on this option see section
+  `Host based flash access`_
+
 UART
 ****
 
@@ -584,3 +588,36 @@ option ``-attach_uart_cmd=<"cmd">``. Where the default command is given by
 :option:`CONFIG_NATIVE_UART_AUTOATTACH_DEFAULT_CMD`.
 Note that the default command assumes both ``xterm`` and ``screen`` are
 installed in the system.
+
+Host based flash access
+***********************
+
+In case a flash device is present, the file system partitions on the flash
+device can be exposed through the host file system by enabling
+:option:`CONFIG_NATIVE_POSIX_FUSE_FLASH_ACCESS`. This option enables a FUSE
+(File system in User space) layer that maps the Zephyr file system calls to
+the required UNIX file system calls and as such allows access to flash file
+system partitions with generic operating system tools (cd, ls, mkdir, ...).
+
+By default the partitions are exposed through the directory *flash* in the
+current working directory. This directory can be changed via the command line
+option *--flash-mount*. As this directory operates as mount point for FUSE
+you have to ensure that it exist before starting the native POSIX board.
+
+On exit the native POSIX board application will take care of unmounting the
+directory. In the unfortunate case that native POSIX board application would
+crash you can cleanup the stale mount point via the program fusermount, eg::
+
+    $ fusermount -u flash
+
+Note that this feature requires a 32-bit version of the FUSE library on the host
+system and ``pkg-config`` settings to correctly pickup the FUSE install path
+and compiler flags.
+
+On a Ubuntu 18.04 host system, for example, install the ``pkg-config`` and
+``libfuse-dev:i386`` packages, and configure the pkg-config search path with
+these commands::
+
+    $ sudo apt-get install pkg-config libfuse-dev:i386
+    $ export PKG_CONFIG_PATH=/usr/lib/i386-linux-gnu/pkgconfig
+
