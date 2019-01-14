@@ -515,6 +515,36 @@ unmount_err:
 	return rc;
 }
 
+int fs_readmount(int *number, const char **name)
+{
+	sys_dnode_t *node;
+	int cnt = 0;
+	struct fs_mount_t *itr = NULL;
+
+	*name = NULL;
+
+	k_mutex_lock(&mutex, K_FOREVER);
+
+	SYS_DLIST_FOR_EACH_NODE(&fs_mnt_list, node) {
+		if (*number == cnt) {
+			itr = CONTAINER_OF(node, struct fs_mount_t, node);
+			break;
+		}
+
+		++cnt;
+	}
+
+	k_mutex_unlock(&mutex);
+
+	if (itr != NULL) {
+		*name = itr->mnt_point;
+		++(*number);
+	}
+
+	return 0;
+
+}
+
 /* Register File system */
 int fs_register(enum fs_type type, struct fs_file_system_t *fs)
 {

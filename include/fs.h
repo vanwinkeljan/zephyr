@@ -415,6 +415,21 @@ int fs_mount(struct fs_mount_t *mp);
 int fs_unmount(struct fs_mount_t *mp);
 
 /**
+ * @brief Mount point read entry
+ *
+ * Reads mount point entries
+ *
+ * @param number Pointer to mount point number
+ * @param name Pointer to mount point name
+ *
+ * @retval 0 Success
+ * @retval -ERRNO errno code if error
+ * @return In end-of-mount condition, this will return 0 and set
+ * name to NULL
+ */
+int fs_readmount(int *number, const char **name);
+
+/**
  * @brief File or directory status
  *
  * Checks the status of a file or directory specified by the path
