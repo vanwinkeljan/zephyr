@@ -7,3 +7,4 @@ zephyr_sources(
 
 zephyr_sources_ifdef(CONFIG_SETTINGS_FS settings_file.c)
 zephyr_sources_ifdef(CONFIG_SETTINGS_FCB settings_fcb.c)
+zephyr_sources_ifdef(CONFIG_SETTINGS_SHELL shell.c)

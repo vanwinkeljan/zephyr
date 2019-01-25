@@ -27,6 +27,12 @@ config SETTINGS_USE_BASE64
 	help
 	  Enables values encoding using Base64.
 
+config SETTINGS_SHELL
+	bool "Enable settings shell"
+	depends on SHELL && SETTINGS
+	help
+	  This shell provides basic access to the settings.
+
 choice
 	prompt "Storage back-end"
 	default SETTINGS_FCB if FCB
