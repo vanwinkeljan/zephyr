@@ -21,8 +21,18 @@ if(CONFIG_HAS_SDL)
 	zephyr_library_sources(sdl_events.c)
 endif()
 
+if(CONFIG_NATIVE_POSIX_FUSE_FLASH_ACCESS)
+	find_package(PkgConfig REQUIRED)
+	pkg_search_module(FUSE REQUIRED fuse)
+	zephyr_include_directories(${FUSE_INCLUDE_DIR})
+	zephyr_link_libraries(${FUSE_LIBRARIES})
+	zephyr_library_compile_definitions(_FILE_OFFSET_BITS=64)
+	zephyr_library_sources(fuse_flash.c)
+endif()
+
+
 zephyr_ld_options(
-  -lm
+	-lm
 )
 
 # Override the C standard used for compilation to C 2011
