@@ -89,6 +89,7 @@ config LVGL_DPI
 	default 128
 
 config LVGL_BITS_PER_PIXEL
+	default 16 if LVGL_V6
 	default 0
 
 choice LVGL_COLOR_DEPTH

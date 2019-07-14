@@ -1,8 +1,10 @@
 #
-# Copyright (c) 2018 Jan Van Winkel <jan.van_winkel@dxplore.eu>
+# Copyright (c) 2019 Jan Van Winkel <jan.van_winkel@dxplore.eu>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+
+if LVGL
 
 menu "Themes"
 
@@ -42,7 +44,8 @@ config LVGL_THEME_MONO
 config LVGL_THEME_MATERIAL
 	bool "Enable material theme support"
 	help
-	  Enable material theme, flat theme with bold colors and light shadow, support
+	  Enable material theme, flat theme with bold colors and light shadow,
+	  support
 
 config LVGL_THEME_ZEN
 	bool "Enable zen theme support"
@@ -54,6 +57,8 @@ config LVGL_THEME_NEMO
 	help
 	  Enable water-like theme based on the movie "Finding Nemo"
 
-endif
+endif # LVGL_THEMES
 
 endmenu
+
+endif # LVGL

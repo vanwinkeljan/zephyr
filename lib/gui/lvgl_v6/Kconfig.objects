@@ -1,0 +1,24 @@
+#
+# Copyright (c) 2019 Jan Van Winkel <jan.van_winkel@dxplore.eu>
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+if LVGL_V6
+
+choice
+	prompt "Extend objects clickable area"
+	default LVGL_V6_EXT_CLICK_AREA_OFF
+
+	config LVGL_V6_EXT_CLICK_AREA_OFF
+		bool "Disabled"
+
+	config LVGL_V6_EXT_CLICK_AREA_TINY
+		bool "Only horizontally and vertical"
+
+	config LVGL_V6_EXT_CLICK_AREA_FULL
+		bool "Full flexibility"
+
+endchoice
+
+endif # LVGL_V6

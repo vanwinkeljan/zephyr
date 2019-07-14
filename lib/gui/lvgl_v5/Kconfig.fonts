@@ -1,9 +1,10 @@
 #
-# Copyright (c) 2018 Jan Van Winkel <jan.van_winkel@dxplore.eu>
+# Copyright (c) 2019 Jan Van Winkel <jan.van_winkel@dxplore.eu>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
+if LVGL_V5
 menu "Fonts"
 
 config LVGL_BUILD_IN_FONTS
@@ -187,3 +188,5 @@ choice
 endchoice
 
 endmenu
+
+endif # LVGL_V5

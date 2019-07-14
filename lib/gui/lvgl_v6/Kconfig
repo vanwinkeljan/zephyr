@@ -1,0 +1,55 @@
+#
+# Copyright (c) 2019 Jan Van Winkel <jan.van_winkel@dxplore.eu>
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+if LVGL_V6
+
+choice
+	prompt "Rendering Buffer Allocation"
+	default LVGL_V6_BUFFER_ALLOC_STATIC
+	help
+	  Type of allocation that should be used for allocating rendering buffers
+
+	config LVGL_V6_BUFFER_ALLOC_STATIC
+		bool "Static"
+		help
+		  Rendering buffers are statically allocated based on the following
+		  configuration parameters:
+		  * Horizontal screen resolution
+		  * Vertical screen resolution
+		  * Rendering buffer size
+		  * Bytes per pixel
+
+	config LVGL_V6_BUFFER_ALLOC_DYNAMIC
+		bool "Dynamic"
+		help
+		  Rendering buffers are dynamically allocated based on the actual
+		  display parameters
+
+endchoice
+
+choice
+	prompt "String character encoding"
+	default LVGL_V6_TXT_ENC_ASCII
+
+	config LVGL_V6_TXT_ENC_ASCII
+		bool "ASCII string encoding"
+
+	config LVGL_V6_TXT_ENC_UTF8
+		bool "UTF-8 string encoding"
+
+endchoice
+
+config LVGL_V6_IMG_CACHE_DEF_SIZE
+	int "Default image cache size"
+	default 1
+	help
+	  Default image cache size, image caching keeps the images open.
+	  If only the built-in image formats are used there is no real
+	  advantage of caching. With complex image decoders (e.g. PNG or JPG)
+	  caching can save the continuous decoding of images. However the
+	  opened images might consume additional RAM.
+
+endif # LVGL_V6

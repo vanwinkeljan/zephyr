@@ -4,19 +4,27 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+menuconfig LVGL
+	bool "LittlevGL GUI library"
+	help
+	  This option enables the LittlevGL GUI library.
+
+if LVGL
+
 choice LVGL_VERSION
 	prompt "LittlevGL GUI library API Version"
-	default LVGL_V5
+	default LVGL_V6
 	help
 	  LittlevGL GUI library API Version
 
-	config LVGL_V5
-		bool "API Version 5"
+config LVGL_V5
+	bool "API Version 5"
 
-endchoice
+config LVGL_V6
+	bool "API Version 6"
 
-if LVGL_V5
+endchoice # LVGL_VERSION
 
-rsource "lvgl_v5/Kconfig"
+rsource "lvgl_common/Kconfig"
 
-endif # LVGL_V5
+endif # LVGL

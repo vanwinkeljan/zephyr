@@ -9,7 +9,9 @@
 #include <lvgl.h>
 #include <lv_core/lv_refr.h>
 #include "lvgl_color.h"
+#ifdef CONFIG_LVGL_FILESYSTEM
 #include "lvgl_fs.h"
+#endif
 
 #define LOG_LEVEL CONFIG_LVGL_LOG_LEVEL
 #include <logging/log.h>
