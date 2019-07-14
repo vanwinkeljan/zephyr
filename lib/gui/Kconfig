@@ -4,4 +4,19 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-rsource "lvgl/Kconfig"
+choice LVGL_VERSION
+	prompt "LittlevGL GUI library API Version"
+	default LVGL_V5
+	help
+	  LittlevGL GUI library API Version
+
+	config LVGL_V5
+		bool "API Version 5"
+
+endchoice
+
+if LVGL_V5
+
+rsource "lvgl_v5/Kconfig"
+
+endif # LVGL_V5
