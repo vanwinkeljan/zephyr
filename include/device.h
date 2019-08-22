@@ -8,6 +8,7 @@
 #define ZEPHYR_INCLUDE_DEVICE_H_
 
 #include <kernel.h>
+#include <toolchain.h>
 
 /**
  * @brief Device Driver APIs
@@ -107,7 +108,8 @@ extern "C" {
 		.config_info = (cfg_info)				  \
 	};								  \
 	static Z_DECL_ALIGN(struct device) _CONCAT(__device_, dev_name) __used \
-	__attribute__((__section__(".init_" #level STRINGIFY(prio)))) = { \
+	__attribute__((__section__(".init_" #level STRINGIFY(prio))))     \
+	__no_sanitize_address = {                                         \
 		.config = &_CONCAT(__config_, dev_name),		  \
 		.driver_api = api,					  \
 		.driver_data = data					  \
@@ -164,7 +166,8 @@ extern "C" {
 		.config_info = (cfg_info)				  \
 	};								  \
 	static Z_DECL_ALIGN(struct device) _CONCAT(__device_, dev_name) __used \
-	__attribute__((__section__(".init_" #level STRINGIFY(prio)))) = { \
+	__attribute__((__section__(".init_" #level STRINGIFY(prio))))     \
+	__no_sanitize_address = {                                        \
 		.config = &_CONCAT(__config_, dev_name),		  \
 		.driver_api = api,					  \
 		.driver_data = data,					  \

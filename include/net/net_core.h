@@ -19,6 +19,7 @@
 #include <logging/log.h>
 #include <sys/__assert.h>
 #include <kernel.h>
+#include <toolchain.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -120,7 +121,8 @@ struct net_stack_info {
 #define NET_STACK_INFO_ADDR(_pretty, _name, _orig, _size, _addr, sfx)	\
 	static struct net_stack_info					\
 	(NET_STACK_GET_NAME(_pretty, _name, sfx)) __used		\
-	__attribute__((__section__(".net_stack.data"))) = {		\
+	__attribute__((__section__(".net_stack.data")))			\
+	__no_sanitize_address = {					\
 		.stack = _addr,						\
 		.size = _size,						\
 		.orig_size = _orig,					\
@@ -138,7 +140,8 @@ struct net_stack_info {
 				  sfx, _nmemb)				\
 	static struct net_stack_info					\
 	(NET_STACK_GET_NAME(_pretty, _name, sfx))[_nmemb] __used	\
-	__attribute__((__section__(".net_stack.data"))) = {		\
+	__attribute__((__section__(".net_stack.data")))			\
+	__no_sanitize_address = {					\
 		[0 ... (_nmemb - 1)] = {				\
 			.stack = _addr[0],				\
 			.size = _size,					\

@@ -176,7 +176,8 @@
  */
 #define Z_STRUCT_SECTION_ITERABLE(struct_type, name) \
 	Z_DECL_ALIGN(struct struct_type) name \
-	__in_section(_##struct_type, static, name) __used
+	__in_section(_##struct_type, static, name) __used \
+	__no_sanitize_address
 
 /*
  * Itterator for structure instances gathered by Z_STRUCT_SECTION_ITERABLE().
