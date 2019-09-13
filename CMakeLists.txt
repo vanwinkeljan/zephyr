@@ -54,6 +54,9 @@ set(SYSCALL_LIST_H_TARGET      syscall_list_h_target)
 set(DRIVER_VALIDATION_H_TARGET driver_validation_h_target)
 set(KOBJ_TYPES_H_TARGET        kobj_types_h_target)
 set(LINKER_SCRIPT_TARGET       linker_script_target)
+if(CONFIG_ZLSAN)
+  set(ZLSANPASS_TARGET         ZLsanPass_target)
+endif()
 
 
 define_property(GLOBAL PROPERTY PROPERTY_OUTPUT_FORMAT BRIEF_DOCS " " FULL_DOCS " ")
@@ -641,6 +644,7 @@ add_dependencies(     ${OFFSETS_LIB}
   ${SYSCALL_LIST_H_TARGET}
   ${DRIVER_VALIDATION_H_TARGET}
   ${KOBJ_TYPES_H_TARGET}
+  ${ZLSANPASS_TARGET}
   )
 
 add_custom_command(
