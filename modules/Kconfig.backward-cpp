@@ -1,0 +1,12 @@
+# Kconfig - backward-cpp
+#
+# Copyright (c) 2019 Jan Van Winkel <jan.van_winkel@dxplore.eu>
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config BACKWARD_CPP
+	bool "Enable backward-cpp"
+	depends on ARCH_POSIX
+	help
+	  Enable backward-cpp, backward-ccp is stack trace printer for C++

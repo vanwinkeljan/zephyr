@@ -28,6 +28,10 @@ manifest:
     - name: hal_atmel
       revision: 5690f5b84495c8b657ff204c5c827df1ab9e12e3
       path: modules/hal/atmel
+    - name: backward-cpp
+      path: modules/debug/backward-cpp
+      revision: 2831aaaf6198e779116b756367c0bc75b58d0c9a
+      url: https://github.com/vanwinkeljan/backward-cpp.git
     - name: ci-tools
       revision: 081d80d6e25366a311015f00418898a94bff6b64
       path: tools/ci-tools
