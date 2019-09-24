@@ -1,0 +1,4 @@
+tests:
+  debug.zlsan:
+    platform_whitelist: native_posix native_posix_64
+    toolchain_whitelist: llvm
